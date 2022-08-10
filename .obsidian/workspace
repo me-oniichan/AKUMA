@@ -8,12 +8,8 @@
         "type": "leaf",
         "dimension": 49.05149051490515,
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "K21MR Sem 3/CSE205 DATA_STRUCTURES_AND_ALGORITHMS/Algorithms.md",
-            "mode": "source",
-            "source": true
-          }
+          "type": "graph",
+          "state": {}
         },
         "group": "ba806b53fd65df8e"
       },
@@ -77,8 +73,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "9c7fca653a53b22c",

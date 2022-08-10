@@ -53,7 +53,7 @@ int main()
 using namespace std;
 int main()
 {
-    int arr[100]={1,2,3,4,5}, n, ele, k;
+    int arr[100], n, ele, k;
     cout<<"Enter the number of elements: ";
     cin>>n;
     cout<<"Enter elements: ";
@@ -74,4 +74,37 @@ int main()
     }
     return 0;
 }
+```
+---
+## Deletion of an element in an array
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int arr[100], n, k;
+    cout<<"Enter the number of elements: ";
+    cin>>n;
+    cout<<"Enter elements: ";
+    for(int i=0;i<n;i++)
+    {
+        cin>>arr[i];
+    }
+    cout<<"Enter index number: ";
+    cin>>k;
+    for(int i=k;i<n;i++) //initialise counter to given index
+    {
+        arr[i-1]=arr[i]; //shift leftwards
+    }
+    for(int i=0;i<n-1;i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+	return 0;
+}
+```
+---
+## Deletion of a specific element
+```cpp
+
 ```
