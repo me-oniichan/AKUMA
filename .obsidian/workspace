@@ -4,19 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "39e512a3a8adacfe",
+        "id": "296bdc6a97a17595",
         "type": "leaf",
-        "dimension": 49.05149051490515,
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "K21MR Sem 3/CSE205 DATA_STRUCTURES_AND_ALGORITHMS/Algorithms.md",
+            "mode": "source",
+            "source": true
+          }
         },
-        "group": "ba806b53fd65df8e"
+        "group": "76bc5a8091ceb1b6"
       },
       {
         "id": "fff60cf028aae84b",
         "type": "leaf",
-        "dimension": 50.94850948509485,
         "state": {
           "type": "markdown",
           "state": {
@@ -25,7 +27,7 @@
             "source": true
           }
         },
-        "group": "ba806b53fd65df8e"
+        "group": "76bc5a8091ceb1b6"
       }
     ],
     "direction": "vertical"
@@ -73,7 +75,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "9c7fca653a53b22c",
@@ -140,7 +143,7 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "39e512a3a8adacfe",
+  "active": "296bdc6a97a17595",
   "lastOpenFiles": [
     "K21MR Sem 3/CSE320 SOFTWARE_ENGINEERING/Unit 1.md",
     "K21MR Sem 3/syllabus.pdf",
