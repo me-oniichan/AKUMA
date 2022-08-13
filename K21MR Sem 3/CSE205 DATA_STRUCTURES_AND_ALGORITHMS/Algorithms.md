@@ -230,5 +230,38 @@ int main()
 # Sorting
 ## Bubble Sort
 ```cpp
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cout << "Enter number of elements: ";
+    cin >> n;
+    int arr[n];
+    cout << "Enter array elements: ";
+    for (int i = 0; i < n; i++)
+    {
+        cin >> arr[i];
+    }
+    for (int i = 0; i < n ; i++) // outer loop
+    {
+        for (int j = 0; j < n - i; j++) // inner loop
+        {
+            if (arr[j] > arr[j + 1]) // swapping elements
+            {
+                swap(arr[j], arr[j + 1]);
+            }
+        }
+    }
+    cout << "The sorted array is: ";
+    for (int i = 0; i < n; i++)
+    {
+        cout << arr[i] << " ";
+    }
+}
+```
+---
+## Insertion Sort
+```cpp
 
 ```
