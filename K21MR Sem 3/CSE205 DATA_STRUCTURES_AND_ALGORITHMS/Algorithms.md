@@ -107,7 +107,38 @@ int main()
 ---
 ## Deletion of a specific element
 ```cpp
-
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n, element;
+    cout<<"Enter number of elements: ";
+    cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++)
+    {
+        cin>>arr[i];
+    }
+    cout<<"Enter element to delete: ";
+    cin>>element;
+    int j;
+    for(j=0;j<n;j++)
+        if(arr[j]==element)
+            break;
+    if(j<n)
+    {
+        n=n-1;
+        for(int k=j;k<n;k++)
+        {
+            arr[k]=arr[k+1];
+        }
+    }
+    for(int i=0;i<n;i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+    return 0;
+}
 ```
 ---
 # Searching
