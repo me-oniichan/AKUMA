@@ -234,34 +234,35 @@ int main()
 using namespace std;
 int main()
 {
-    int n;
-    cout << "Enter number of elements: ";
-    cin >> n;
-    int arr[n];
-    cout << "Enter array elements: ";
-    for (int i = 0; i < n; i++)
-    {
-        cin >> arr[i];
-    }
-    for (int i = 0; i < n ; i++) // outer loop
-    {
-        for (int j = 0; j < n - i; j++) // inner loop
-        {
-            if (arr[j] > arr[j + 1]) // swapping elements
-            {
-                swap(arr[j], arr[j + 1]);
-            }
-        }
-    }
-    cout << "The sorted array is: ";
-    for (int i = 0; i < n; i++)
-    {
-        cout << arr[i] << " ";
-    }
+	int n;
+	cout << "Enter number of elements: ";
+	cin >> n;
+	int arr[n];
+	cout << "Enter array elements: ";
+	for (int i = 0; i < n; i++)
+	{
+		cin >> arr[i];
+	}
+	// ALWAYS USE (n-1) IN BOTH LOOPS
+	for (int i = 0; i < n - 1; i++) // outer loop
+	{
+		for (int j = 0; j < n - 1; j++) // inner loop
+		{
+			if (arr[j] > arr[j + 1]) // swapping elements
+			{
+				swap(arr[j], arr[j + 1]);
+			}
+		}
+	}
+	cout << "The sorted array is: ";
+	for (int i = 0; i < n; i++)
+	{
+		cout << arr[i] << " ";
+	}
 }
 ```
 ---
-## Insertion Sort
+## Selection Sort
 ```cpp
 
 ```
