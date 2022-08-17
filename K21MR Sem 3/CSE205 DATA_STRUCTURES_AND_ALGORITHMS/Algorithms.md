@@ -264,5 +264,36 @@ int main()
 ---
 ## Selection Sort
 ```cpp
-
+#include <bits/stdc++.h>
+#define el endl
+using namespace std;
+int main()
+{
+	int n;
+	cout << "Enter number of elements: ";
+	cin >> n;
+	int arr[n];
+	cout << "Enter array elements: ";
+	for (int i = 0; i < n; i++)
+	{
+		cin >> arr[i];
+	}
+	int min, minIndex;
+	for (int i = 0; i < n - 1; i++)
+	{
+		minIndex = i;
+		for (int j = i + 1; j < n; j++)
+		{
+			if (arr[j] < arr[minIndex])
+				minIndex = j;
+			if (minIndex != i)
+				swap(arr[minIndex], arr[i]);
+		}
+	}
+	cout << "The sorted array is: ";
+	for (int i = 0; i < n; i++)
+	{
+		cout << arr[i] << " ";
+	}
+}
 ```
