@@ -1,3 +1,8 @@
+// Consider the numeric linear array NUMBER[],using the linear search approach ,how many comparisons are used to locate element X in array
+
+// Input Format
+
+// you have to take two input lines: first line takes the array element second line takes the value of x
 #include <bits/stdc++.h>
 using namespace std;
 int main()

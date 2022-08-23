@@ -1,3 +1,8 @@
+// Write a program to remove element from the specific or provided location and after removing , print all the remaining other elements.
+
+// Input Format
+
+// In first line, it will take the total number of elements in array In second line, pollute the values in array In third Line, it will ask for the index number , from where you want to delete the element
 #include <cmath>
 #include <cstdio>
 #include <vector>
