@@ -95,7 +95,7 @@ int main()
     cin>>k;
     for(int i=k;i<n;i++) //initialise counter to given index
     {
-      arr[i-1]=arr[i]; //shift leftwards
+      arr[i]=arr[i+1]; //shift leftwards
     }
     for(int i=0;i<n-1;i++)
     {
@@ -295,5 +295,37 @@ int main()
 	{
 		cout << arr[i] << " ";
 	}
+}
+```
+---
+## Insertion Sort
+```cpp
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n;
+    cout << "Enter size of array: "; // array size input
+    cin >> n;
+    int arr[n];
+    cout << "Enter array elements: "; // array input
+    for (int i = 0; i < n; i++)
+        cin >> arr[i];
+    int i, j, minVal;       // initialize counter and minimum value variables
+    for (i = 0; i < n; i++) // iterate over the array (outer loop)
+    {
+        minVal = arr[i]; // set minVal to first element
+        j = i - 1;
+        while (j >= 0 && arr[j] > minVal) // if elements are greater than minVal
+        {
+            arr[j + 1] = arr[j]; // then shift the elements
+            j = j - 1;
+        }
+        arr[j + 1] = minVal; // re-initialize minVal
+    }
+    for (int i = 0; i < n; i++) // print the array
+        cout << arr[i] << " ";
+    return 0;
 }
 ```
