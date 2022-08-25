@@ -46,3 +46,46 @@ int main()
     }
     return 0;
 }
+/*
+---
+ANOTHER APPROACH
+---
+*/
+// #include <bits/stdc++.h>
+// #define ll long long int
+// using namespace std;
+// int main() {
+//     int n;
+//     cin>>n;
+//     if (n > 20 || n < 1){ 
+//         cout<<"Invalid array size";
+//         return 0;
+//     }
+//     int arr[n];
+//     for(int i= 0; i < n; i++) cin>>arr[i];
+    
+//     if(n < 3) {
+//         cout<<"Not sufficient elements";
+//         return 0;
+//     }
+    
+//     int trips[3] = {0};
+    
+//     for(int i = 0; i < n; i++){
+//         if (arr[i] >= trips[0]){
+//             trips[2] = trips[1];
+//             trips[1] = trips[0];
+//             trips[0] = arr[i];
+//         }
+//         else if(arr[i] > trips[1]){
+//             trips[2] = trips[1];
+//             trips[1] = arr[i];
+//         }
+//         else if(arr[i] > trips[2]){
+//             trips[2] = arr[i];
+//         }
+//     }
+//     cout<<trips[2];
+    
+//     return 0;
+// }
