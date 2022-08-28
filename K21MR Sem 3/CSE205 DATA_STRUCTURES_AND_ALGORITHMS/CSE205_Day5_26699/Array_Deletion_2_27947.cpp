@@ -7,21 +7,34 @@ int main()
 {
     int n;
     cin >> n;
-    if (n == 1)
+    if (n < 2)
     {
         cout << "Invalid Input";
-        exit(0);
+        return 0;
     }
-    string arr[n], arr2[n];
-    for (int i = 0; i < n; i++)
-        cin >> arr[i];
+    string arr[n];
     for (int i = 0; i < n; i++)
     {
-        int j;
-        for (j = 0; j < i; j++)
-            if (arr[i] == arr[j])
-                break;
-        if (i == j)
+        cin >> arr[i];
+        if (arr[i].length() == 0)
+        {
+            cout << "Invalid Input";
+            break;
+        }
+    }
+    for (int i = 0; i < n; i++)
+    {
+        int a = 0;
+        for (int j = 0; j < i; j++)
+        {
+            if (arr[i] == arr[j] && (i != j))
+            {
+                a = a + 1;
+            }
+        }
+        if (a > 0)
+            continue;
+        else
             cout << arr[i] << " ";
     }
     return 0;
