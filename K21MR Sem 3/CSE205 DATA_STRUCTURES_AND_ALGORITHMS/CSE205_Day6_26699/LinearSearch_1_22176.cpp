@@ -11,7 +11,7 @@ int main()
         for (int i = 0; i < n; i++)
         {
             cin >> arr[i];
-            if (arr[i] == 'W' || arr[i] == 'w')
+            if (arr[i] == 'W')
             {
                 cout << i << " ";
                 count++;
