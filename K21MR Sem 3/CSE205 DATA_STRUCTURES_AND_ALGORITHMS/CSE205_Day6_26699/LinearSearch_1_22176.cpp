@@ -11,14 +11,14 @@ int main()
         for (int i = 0; i < n; i++)
         {
             cin >> arr[i];
-            if (arr[i] == 'W' || arr[i]=='w')
+            if (arr[i] == 'W' || arr[i] == 'w')
             {
                 cout << i << " ";
                 count++;
             }
         }
         if (count == 0)
-            cout << -1<<endl<<0;
+            cout << -1 << endl << 0;
         else
             cout << endl << count;
     }
