@@ -2,36 +2,29 @@
 using namespace std;
 int main()
 {
-    int n, count = 0;
+    int n;
     cin >> n;
     char arr[n];
-    int track[n];
-    track[0] = -1;
-    if (n <= 4 || n >= 20)
+    int count = 0;
+    if (n > 4 && n < 20)
     {
-        cout << -1;
-        exit(0);
-    }
-    for (int i = 0; i < n; i++)
-        cin >> arr[i];
-    for (int i = 0; i < n; i++)
-        if (arr[i] == 'W')
+        for (int i = 0; i < n; i++)
         {
-            track[count] = i;
-            count++;
+            cin >> arr[i];
+            if (arr[i] == 'W' || arr[i]=='w')
+            {
+                cout << i << " ";
+                count++;
+            }
         }
-    if (track[0] == -1)
-    {
-        cout << -1 << endl;
-        cout << 0;
-        exit(0);
-    }
-    for (int j = 0; j < count; j++)
-        if (j == count - 1)
-            cout << track[j];
+        if (count == 0)
+            cout << -1<<endl<<0;
         else
-            cout << track[j] << " ";
-    cout << endl;
-    cout << count;
+            cout << endl << count;
+    }
+    else
+    {
+        return 0;
+    }
     return 0;
 }
