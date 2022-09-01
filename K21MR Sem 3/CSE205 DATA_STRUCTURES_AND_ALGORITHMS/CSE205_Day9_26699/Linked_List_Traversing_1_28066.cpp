@@ -42,7 +42,10 @@ public:
             }
             temp = temp->next;
         }
-        cout << sum;
+        if (sum)
+            cout << sum;
+        else
+            cout << "No Even numbers Present";
     }
 };
 int main()
