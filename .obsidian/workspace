@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "K21MR Sem 3/CSE205 DATA_STRUCTURES_AND_ALGORITHMS/Unit 1.md",
+            "file": "K21MR Sem 3/CSE205 DATA_STRUCTURES_AND_ALGORITHMS/Unit 2.md",
             "mode": "source",
             "source": true
           }
@@ -22,7 +22,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "K21MR Sem 3/CSE205 DATA_STRUCTURES_AND_ALGORITHMS/Unit 1.md",
+            "file": "K21MR Sem 3/CSE205 DATA_STRUCTURES_AND_ALGORITHMS/Unit 2.md",
             "mode": "preview",
             "source": true
           }
@@ -92,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "K21MR Sem 3/CSE205 DATA_STRUCTURES_AND_ALGORITHMS/Unit 1.md",
+                "file": "K21MR Sem 3/CSE205 DATA_STRUCTURES_AND_ALGORITHMS/Unit 2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +109,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "K21MR Sem 3/CSE205 DATA_STRUCTURES_AND_ALGORITHMS/Unit 1.md",
+                "file": "K21MR Sem 3/CSE205 DATA_STRUCTURES_AND_ALGORITHMS/Unit 2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -132,7 +132,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "K21MR Sem 3/CSE205 DATA_STRUCTURES_AND_ALGORITHMS/Unit 1.md"
+                "file": "K21MR Sem 3/CSE205 DATA_STRUCTURES_AND_ALGORITHMS/Unit 2.md"
               }
             }
           }
@@ -145,6 +145,8 @@
   },
   "active": "296bdc6a97a17595",
   "lastOpenFiles": [
+    "K21MR Sem 3/CSE205 DATA_STRUCTURES_AND_ALGORITHMS/Unit 1.md",
+    "K21MR Sem 3/CSE205 DATA_STRUCTURES_AND_ALGORITHMS/Unit 2.md",
     "K21MR Sem 3/CSE320 SOFTWARE_ENGINEERING/Unit 1.md",
     "K21MR Sem 3/syllabus.pdf",
     "K21MR Sem 3/CSE320 SOFTWARE_ENGINEERING/fundamentals-of-software-engineering-fourth-edition-rajib-mall.pdf"

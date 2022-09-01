@@ -1,80 +1,87 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-// A linked list node
-class Node
+class Node // general Node declaration
 {
-	public:
+public:
 	int data;
 	Node *next;
 };
 
-// Given a reference (pointer to pointer)
-// to the head of a list and an int,
-// appends a new node at the end
-void append(Node** head_ref, int new_data)
+Node *head = NULL; // global head pointer
+
+void insertAtEnd(int data)
 {
+	Node *newNode = new Node;
+	newNode->data = data; // insert data into data part of node
+	newNode->next = NULL; // assign NULL to the next of the node
 
-	// 1. allocate node
-	Node* new_node = new Node();
-
-	//used in step 5
-	Node *last = *head_ref;
-
-	// 2. put in the data
-	new_node->data = new_data;
-
-	/* 3. This new node is going to be
-	the last node, so make next of
-	it as NULL*/
-	new_node->next = NULL;
-
-	/* 4. If the Linked List is empty,
-	then make the new node as head */
-	if (*head_ref == NULL)
-	{
-		*head_ref = new_node;
-		return;
+	if(head == NULL){
+		head = newNode; // if list is empty then make new node as head
 	}
-
-	/* 5. Else traverse till the last node */
-	while (last->next != NULL)
-	{
-		last = last->next;
-	}
-
-	/* 6. Change the next of last node */
-	last->next = new_node;
-	return;
-}
-
-// This function prints contents of
-// linked list starting from head
-void printList(Node *node)
-{
-	while (node != NULL)
-	{
-		cout<<" "<<node->data;
-		node = node->next;
+	// else if list is not empty then traverse to the end of the list and then add the element
+	else{
+		Node *temp = head;
+		while(temp->next != NULL)
+			temp = temp->next;
+		temp->next = newNode; // change the next of the last node to the new node
 	}
 }
 
-// Driver code
+// function to insert data at a given position
+void insertAtPos(int data, int pos)
+{
+	Node *newNode = new Node();
+	newNode->data = data;
+	newNode->next = NULL;
+
+	// if position is 1 then insert at head
+	if(pos == 1){
+		newNode->next = head;
+		head = newNode;
+	}	
+	// else iterate to find the given position and then insert
+	else{
+		Node *temp = head;
+		for(int i = 1; i < pos - 1; i++){
+			if(temp != NULL){
+				temp = temp->next;
+			}
+		}
+
+		if(temp != NULL){
+			newNode->next = temp->next;
+			temp->next = newNode;
+		}
+		else{
+			cout<<"The prev node is null.";
+		}
+	}
+}
+
+// function to print the list
+void printList()
+{
+	Node *temp = head;
+	while (temp != NULL)
+	{
+		cout << temp->data << " ";
+		temp = temp->next;
+	}
+}
+
 int main()
 {
+	// inserting element in the end of the list
+	insertAtEnd(6);
+	insertAtEnd(5);
+	insertAtEnd(4);
+	insertAtEnd(3);
+	
+	// insert element at a given position
+	insertAtPos(100,2);
+	insertAtPos(499,4);
 
-	// Start with the empty list
-	Node* head = NULL;
-	
-	// Insert 6. So linked list becomes 6->NULL
-	append(&head, 6);
-	
-	// Insert 4 at the end. So
-	// linked list becomes 1->7->6->4->NULL
-	append(&head, 4);
-	
-	cout<<"Created Linked list is: ";
-	printList(head);
-	
+	printList(); // function call to print the list
+
 	return 0;
 }
