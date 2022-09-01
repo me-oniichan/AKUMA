@@ -1,5 +1,7 @@
 # Traversal
+
 ## Traversing an array
+
 ```cpp
 #include<iostream>
 using namespace std;
@@ -15,8 +17,11 @@ int main()
     return 0;
 }
 ```
+
 ---
+
 ## Sum of prime numbers in an array
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -46,9 +51,13 @@ int main()
     return 0;
 }
 ```
+
 ---
+
 # Insertion and Deletion
+
 ## Insertion of new element in an array
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -76,8 +85,11 @@ int main()
     return 0;
 }
 ```
+
 ---
+
 ## Deletion of an element in an array
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -104,8 +116,11 @@ int main()
     return 0;
 }
 ```
+
 ---
+
 ## Deletion of a specific element
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -140,9 +155,13 @@ int main()
     return 0;
 }
 ```
+
 ---
+
 # Searching
+
 ## Linear Search
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -178,8 +197,11 @@ int main()
     return 0;
 }
 ```
+
 ---
+
 ## Binary Search
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -226,79 +248,89 @@ int main()
     return 0;
 }
 ```
+
 ---
+
 # Sorting
+
 ## Bubble Sort
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
 int main()
 {
-	int n;
-	cout << "Enter number of elements: ";
-	cin >> n;
-	int arr[n];
-	cout << "Enter array elements: ";
-	for (int i = 0; i < n; i++)
-	{
-		cin >> arr[i];
-	}
-	// ALWAYS USE (n-1) IN BOTH LOOPS
-	for (int i = 0; i < n - 1; i++) // outer loop
-	{
-		for (int j = 0; j < n - 1; j++) // inner loop
-		{
-			if (arr[j] > arr[j + 1]) // swapping elements
-			{
-				swap(arr[j], arr[j + 1]);
-			}
-		}
-	}
-	cout << "The sorted array is: ";
-	for (int i = 0; i < n; i++)
-	{
-		cout << arr[i] << " ";
-	}
+ int n;
+ cout << "Enter number of elements: ";
+ cin >> n;
+ int arr[n];
+ cout << "Enter array elements: ";
+ for (int i = 0; i < n; i++)
+ {
+  cin >> arr[i];
+ }
+ // ALWAYS USE (n-1) IN BOTH LOOPS
+ for (int i = 0; i < n - 1; i++) // outer loop
+ {
+  for (int j = 0; j < n - 1; j++) // inner loop
+  {
+   if (arr[j] > arr[j + 1]) // swapping elements
+   {
+    swap(arr[j], arr[j + 1]);
+   }
+  }
+ }
+ cout << "The sorted array is: ";
+ for (int i = 0; i < n; i++)
+ {
+  cout << arr[i] << " ";
+ }
 }
 ```
+
 ---
+
 ## Selection Sort
+
 ```cpp
 #include <bits/stdc++.h>
 #define el endl
 using namespace std;
 int main()
 {
-	int n;
-	cout << "Enter number of elements: ";
-	cin >> n;
-	int arr[n];
-	cout << "Enter array elements: ";
-	for (int i = 0; i < n; i++)
-	{
-		cin >> arr[i];
-	}
-	int min, minIndex;
-	for (int i = 0; i < n - 1; i++)
-	{
-		minIndex = i;
-		for (int j = i + 1; j < n; j++)
-		{
-			if (arr[j] < arr[minIndex])
-				minIndex = j;
-			if (minIndex != i)
-				swap(arr[minIndex], arr[i]);
-		}
-	}
-	cout << "The sorted array is: ";
-	for (int i = 0; i < n; i++)
-	{
-		cout << arr[i] << " ";
-	}
+ int n;
+ cout << "Enter number of elements: ";
+ cin >> n;
+ int arr[n];
+ cout << "Enter array elements: ";
+ for (int i = 0; i < n; i++)
+ {
+  cin >> arr[i];
+ }
+ int min, minIndex;
+ for (int i = 0; i < n - 1; i++)
+ {
+  minIndex = i;
+  for (int j = i + 1; j < n; j++)
+  {
+   if (arr[j] < arr[minIndex])
+    minIndex = j;
+   if (minIndex != i)
+    swap(arr[minIndex], arr[i]);
+  }
+ }
+ cout << "The sorted array is: ";
+ for (int i = 0; i < n; i++)
+ {
+  cout << arr[i] << " ";
+ }
 }
 ```
+
 ---
+
 ## Insertion Sort
+
 ```cpp
 #include <iostream>
 using namespace std;

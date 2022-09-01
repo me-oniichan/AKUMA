@@ -9,11 +9,25 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "K21MR Sem 3/CSE205 DATA_STRUCTURES_AND_ALGORITHMS/Algorithms.md",
+            "file": "K21MR Sem 3/CSE205 DATA_STRUCTURES_AND_ALGORITHMS/Unit 1.md",
             "mode": "source",
             "source": true
           }
-        }
+        },
+        "group": "a3b3d9ad92f9f1d1"
+      },
+      {
+        "id": "fe42627f5e966b63",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "K21MR Sem 3/CSE205 DATA_STRUCTURES_AND_ALGORITHMS/Unit 1.md",
+            "mode": "preview",
+            "source": true
+          }
+        },
+        "group": "a3b3d9ad92f9f1d1"
       }
     ],
     "direction": "vertical"
@@ -78,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "K21MR Sem 3/CSE205 DATA_STRUCTURES_AND_ALGORITHMS/Algorithms.md",
+                "file": "K21MR Sem 3/CSE205 DATA_STRUCTURES_AND_ALGORITHMS/Unit 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +109,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "K21MR Sem 3/CSE205 DATA_STRUCTURES_AND_ALGORITHMS/Algorithms.md",
+                "file": "K21MR Sem 3/CSE205 DATA_STRUCTURES_AND_ALGORITHMS/Unit 1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +132,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "K21MR Sem 3/CSE205 DATA_STRUCTURES_AND_ALGORITHMS/Algorithms.md"
+                "file": "K21MR Sem 3/CSE205 DATA_STRUCTURES_AND_ALGORITHMS/Unit 1.md"
               }
             }
           }
