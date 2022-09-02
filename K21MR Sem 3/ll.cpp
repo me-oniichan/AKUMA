@@ -9,52 +9,25 @@ public:
 
 Node *head = NULL; // global head pointer
 
-void insertAtEnd(int data)
+void push(int data)
 {
 	Node *newNode = new Node;
 	newNode->data = data; // insert data into data part of node
-	newNode->next = NULL; // assign NULL to the next of the node
 
-	if(head == NULL){
+	if (head == NULL)
+	{
 		head = newNode; // if list is empty then make new node as head
+		newNode->next = head;
 	}
 	// else if list is not empty then traverse to the end of the list and then add the element
-	else{
+	else
+	{
 		Node *temp = head;
-		while(temp->next != NULL)
+		while (temp->next != head){
 			temp = temp->next;
-		temp->next = newNode; // change the next of the last node to the new node
-	}
-}
-
-// function to insert data at a given position
-void insertAtPos(int data, int pos)
-{
-	Node *newNode = new Node();
-	newNode->data = data;
-	newNode->next = NULL;
-
-	// if position is 1 then insert at head
-	if(pos == 1){
+		}
 		newNode->next = head;
-		head = newNode;
-	}	
-	// else iterate to find the given position and then insert
-	else{
-		Node *temp = head;
-		for(int i = 1; i < pos - 1; i++){
-			if(temp != NULL){
-				temp = temp->next;
-			}
-		}
-
-		if(temp != NULL){
-			newNode->next = temp->next;
-			temp->next = newNode;
-		}
-		else{
-			cout<<"The prev node is null.";
-		}
+		temp->next = newNode; // change the next of the last node to the new node
 	}
 }
 
@@ -62,26 +35,46 @@ void insertAtPos(int data, int pos)
 void printList()
 {
 	Node *temp = head;
-	while (temp != NULL)
+	cout << head->data << " " ;
+	temp = temp->next;
+	while (temp != head)
 	{
 		cout << temp->data << " ";
 		temp = temp->next;
 	}
 }
 
+void InsertAtBeg(int d){
+	Node* newNode = new Node;
+	newNode->data = d;
+	if(head == NULL){
+		head = newNode;
+		newNode->next = head;
+	}
+	else{
+		newNode->next = head;
+	}
+}
+
 int main()
 {
+	int x;
+	cout << "Enter number of elements: ";
+	cin >> x;
 	// inserting element in the end of the list
-	insertAtEnd(6);
-	insertAtEnd(5);
-	insertAtEnd(4);
-	insertAtEnd(3);
-	
-	// insert element at a given position
-	insertAtPos(100,2);
-	insertAtPos(499,4);
+	while(x--)
+	{
+		int n; 
+		cin >> n;
+		push(n);
+	}
 
 	printList(); // function call to print the list
 
+	int input;
+	cout << "Header insertion element: ";
+	cin >> input;
+
+	InsertAtBeg(input);
 	return 0;
 }
