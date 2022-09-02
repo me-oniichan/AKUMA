@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "K21MR Sem 3/CSE205 DATA_STRUCTURES_AND_ALGORITHMS/Unit 2.md",
+            "file": "K21MR Sem 3/CSE205 DATA_STRUCTURES_AND_ALGORITHMS/Unit 1.md",
             "mode": "source",
             "source": true
           }
@@ -22,7 +22,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "K21MR Sem 3/CSE205 DATA_STRUCTURES_AND_ALGORITHMS/Unit 2.md",
+            "file": "K21MR Sem 3/CSE205 DATA_STRUCTURES_AND_ALGORITHMS/Unit 1.md",
             "mode": "preview",
             "source": true
           }
@@ -75,8 +75,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "9c7fca653a53b22c",
@@ -92,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "K21MR Sem 3/CSE205 DATA_STRUCTURES_AND_ALGORITHMS/Unit 2.md",
+                "file": "K21MR Sem 3/CSE205 DATA_STRUCTURES_AND_ALGORITHMS/Unit 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +108,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "K21MR Sem 3/CSE205 DATA_STRUCTURES_AND_ALGORITHMS/Unit 2.md",
+                "file": "K21MR Sem 3/CSE205 DATA_STRUCTURES_AND_ALGORITHMS/Unit 1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -132,7 +131,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "K21MR Sem 3/CSE205 DATA_STRUCTURES_AND_ALGORITHMS/Unit 2.md"
+                "file": "K21MR Sem 3/CSE205 DATA_STRUCTURES_AND_ALGORITHMS/Unit 1.md"
               }
             }
           }
@@ -145,8 +144,8 @@
   },
   "active": "296bdc6a97a17595",
   "lastOpenFiles": [
-    "K21MR Sem 3/CSE205 DATA_STRUCTURES_AND_ALGORITHMS/Unit 1.md",
     "K21MR Sem 3/CSE205 DATA_STRUCTURES_AND_ALGORITHMS/Unit 2.md",
+    "K21MR Sem 3/CSE205 DATA_STRUCTURES_AND_ALGORITHMS/Unit 1.md",
     "K21MR Sem 3/CSE320 SOFTWARE_ENGINEERING/Unit 1.md",
     "K21MR Sem 3/syllabus.pdf",
     "K21MR Sem 3/CSE320 SOFTWARE_ENGINEERING/fundamentals-of-software-engineering-fourth-edition-rajib-mall.pdf"

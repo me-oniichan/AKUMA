@@ -1,3 +1,9 @@
+// The LPU named as Fees_Due_Record is maintaining the records of its student Fee details using a linked list where the following details of employees are maintained:
+
+// Student Registration Number
+// Name
+// Due Fee
+// The LPU is looking for an interface where they can search the details of student who have fee due more than 25000. You have to implement the solution for the same in the following function: void Insert_Details(int , string, int ) void Fees_Due_Details()
 #include <bits/stdc++.h>
 using namespace std;
 class Node

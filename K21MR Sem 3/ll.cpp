@@ -1,80 +1,40 @@
-#include <bits/stdc++.h>
+#include<iostream>
 using namespace std;
-class Node // general Node declaration
+
+void mergeArrays(int arr1[], int arr2[], int n1,
+							int n2, int arr3[])
 {
-public:
-	int data;
-	Node *next;
-};
+	int i = 0, j = 0, k = 0;
 
-Node *head = NULL; // global head pointer
-
-void push(int data)
-{
-	Node *newNode = new Node;
-	newNode->data = data; // insert data into data part of node
-
-	if (head == NULL)
+	while (i < n1 && j < n2)
 	{
-		head = newNode; // if list is empty then make new node as head
-		newNode->next = head;
+		if (arr1[i] < arr2[j])
+			arr3[k++] = arr1[i++];
+		else
+			arr3[k++] = arr2[j++];
 	}
-	// else if list is not empty then traverse to the end of the list and then add the element
-	else
-	{
-		Node *temp = head;
-		while (temp->next != head){
-			temp = temp->next;
-		}
-		newNode->next = head;
-		temp->next = newNode; // change the next of the last node to the new node
-	}
-}
 
-// function to print the list
-void printList()
-{
-	Node *temp = head;
-	cout << head->data << " " ;
-	temp = temp->next;
-	while (temp != head)
-	{
-		cout << temp->data << " ";
-		temp = temp->next;
-	}
-}
+	while (i < n1)
+		arr3[k++] = arr1[i++];
 
-void InsertAtBeg(int d){
-	Node* newNode = new Node;
-	newNode->data = d;
-	if(head == NULL){
-		head = newNode;
-		newNode->next = head;
-	}
-	else{
-		newNode->next = head;
-	}
+	while (j < n2)
+		arr3[k++] = arr2[j++];
 }
 
 int main()
 {
-	int x;
-	cout << "Enter number of elements: ";
-	cin >> x;
-	// inserting element in the end of the list
-	while(x--)
-	{
-		int n; 
-		cin >> n;
-		push(n);
-	}
+	int arr1[] = {1, 3, 5, 7};
+	int n1 = sizeof(arr1) / sizeof(arr1[0]);
 
-	printList(); // function call to print the list
+	int arr2[] = {2, 4, 6, 8};
+	int n2 = sizeof(arr2) / sizeof(arr2[0]);
 
-	int input;
-	cout << "Header insertion element: ";
-	cin >> input;
+	int arr3[n1+n2];
+	mergeArrays(arr1, arr2, n1, n2, arr3);
 
-	InsertAtBeg(input);
+	cout << "Array after merging" <<endl;
+	for (int i=0; i < n1+n2; i++)
+		cout << arr3[i] << " ";
+
 	return 0;
 }
