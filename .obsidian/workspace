@@ -7,8 +7,12 @@
         "id": "2a8161b926dd38fa",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "K21MR Sem 3/CSE205 DATA_STRUCTURES_AND_ALGORITHMS/Unit 1.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -74,6 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "K21MR Sem 3/CSE205 DATA_STRUCTURES_AND_ALGORITHMS/Unit 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -90,6 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "K21MR Sem 3/CSE205 DATA_STRUCTURES_AND_ALGORITHMS/Unit 1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -111,7 +117,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "K21MR Sem 3/CSE205 DATA_STRUCTURES_AND_ALGORITHMS/Unit 1.md"
+              }
             }
           }
         ]

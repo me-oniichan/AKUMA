@@ -1,40 +1,100 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-void mergeArrays(int arr1[], int arr2[], int n1,
-							int n2, int arr3[])
+class Node
 {
-	int i = 0, j = 0, k = 0;
-
-	while (i < n1 && j < n2)
+public:
+	int data;
+	Node *next;
+};
+Node *head = NULL;
+void insert(int d)
+{
+	Node *ptr;
+	Node *n = new Node;
+	n->data = d;
+	n->next = NULL;
+	if (head == NULL)
 	{
-		if (arr1[i] < arr2[j])
-			arr3[k++] = arr1[i++];
-		else
-			arr3[k++] = arr2[j++];
+		head = n;
+	}
+	else
+	{
+		ptr = head;
+		while (ptr->next != NULL)
+		{
+			ptr = ptr->next;
+		}
+		ptr->next = n;
+	}
+}
+void traverse()
+{
+	Node *ptr;
+	ptr = head;
+	while (ptr != NULL)
+	{
+		cout << ptr->data << " ";
+		ptr = ptr->next;
+	}
+}
+void deletefirstNode()
+{ 
+	Node* temp=head;
+	if (temp == NULL)
+	{
+		cout << "Linked list is empty";
+	}
+	else
+	{
+		head = head->next;
 	}
 
-	while (i < n1)
-		arr3[k++] = arr1[i++];
-
-	while (j < n2)
-		arr3[k++] = arr2[j++];
 }
-
+void deleteLastNode()
+{
+	if (head == NULL)
+	{
+		cout << "Linked list is empty";
+	}
+	else if (head->next == NULL)
+	{
+		head = NULL;
+	}
+	else
+	{
+		Node *ptr = head;
+		while ((ptr->next)->next != NULL)
+			ptr = ptr->next;
+		ptr->next = NULL;
+		cout << "last node deleted";
+	}
+}
 int main()
 {
-	int arr1[] = {1, 3, 5, 7};
-	int n1 = sizeof(arr1) / sizeof(arr1[0]);
-
-	int arr2[] = {2, 4, 6, 8};
-	int n2 = sizeof(arr2) / sizeof(arr2[0]);
-
-	int arr3[n1+n2];
-	mergeArrays(arr1, arr2, n1, n2, arr3);
-
-	cout << "Array after merging" <<endl;
-	for (int i=0; i < n1+n2; i++)
-		cout << arr3[i] << " ";
-
-	return 0;
+	int ch = 1, i, x;
+	while (ch != 0)
+	{
+		cout << "\nPress:\n1. to inssert new node.\n2. To delete first node.\n3. To delete last node.\n4. To traverse.\n0. to exit.\n";
+		cin >> ch;
+		if (ch == 1)
+		{
+			cout << "Enter data to insert";
+			cin >> x;
+			insert(x);
+		}
+		else if (ch == 2)
+		{
+			deletefirstNode();
+		}
+		else if (ch == 3)
+		{
+			deleteLastNode();
+		}
+		else if (ch == 4)
+		{
+			traverse();
+		}
+	}
 }
+

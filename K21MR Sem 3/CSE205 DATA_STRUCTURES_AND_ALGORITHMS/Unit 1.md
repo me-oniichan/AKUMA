@@ -272,7 +272,7 @@ int main()
  // ALWAYS USE (n-1) IN BOTH LOOPS
  for (int i = 0; i < n - 1; i++) // outer loop
  {
-  for (int j = 0; j < n - 1; j++) // inner loop
+  for (int j = 0; j < n - 1 - i; j++) // inner loop
   {
    if (arr[j] > arr[j + 1]) // swapping elements
    {
@@ -307,7 +307,7 @@ int main()
  {
   cin >> arr[i];
  }
- int min, minIndex;
+ int minIndex;
  for (int i = 0; i < n - 1; i++)
  {
   minIndex = i;
@@ -315,7 +315,7 @@ int main()
   {
    if (arr[j] < arr[minIndex])
     minIndex = j;
-   if (minIndex != i)
+   // if (minIndex != i)
     swap(arr[minIndex], arr[i]);
   }
  }
