@@ -1,48 +1,59 @@
-#include <bits/stdc++.h>
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
 using namespace std;
-int main()
+int binarysearch(int arr[],int n)
 {
-    int arr[100], st, mid, end, i, num, tgt;
-
-    // cin >> num;
-    num = 5;
-
-    for (i = 0; i < num; i++)
+    int value;
+    cin>>value;
+    int low=0;
+    int high=n-1;
+    while(low<=high)
     {
-        cin >> arr[i];
-        if (arr[i] > 104 || arr[i] < -104)
+        int mid=(low+high)/2;
+        if(arr[mid]==value)
         {
-            exit(0);
+            cout<<mid;
+            return 0;
+        }
+        else if(arr[mid]>value)
+        {
+            high=mid-1;
+        }
+        else{
+            low=mid+1;
         }
     }
+    cout<<-1;
+    return 0;
+}
 
-    st = 0;
-    end = num - 1; // size of array (num) - 1
+int main() {
 
-    cin >> tgt;
-    if (tgt > 104 || tgt < -104)
+    int n;
+    cin>>n;
+    if(n==1)
     {
-        exit(0);
+        int arr[5];
+        arr[0]=n;
+        for(int i=1;i<5;i++)
+       {
+          cin>>arr[i];
+       }
+        binarysearch(arr,5);
+        
     }
+    else{
+            int arr[n];
+        for(int i=0;i<n;i++)
+       {
+        cin>>arr[i];
+       }
+        binarysearch(arr,n);
+        
 
-    while (st <= end)
-    {
-        mid = (st + end) / 2;
-        if (arr[mid] == tgt)
-        {
-            cout << (mid);
-            exit(0); // use for exit program the program
-        }
-        else if (tgt > arr[mid])
-        {
-            st = mid + 1; // set the new value for st variable
-        }
-
-        else if (tgt < arr[mid])
-        {
-            end = mid - 1; // set the new value for end variable
-        }
     }
-    cout << "-1" << endl;
     return 0;
 }
