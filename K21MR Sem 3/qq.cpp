@@ -1,82 +1,97 @@
 #include <bits/stdc++.h>
 using namespace std;
-class Node // general Node declaration
+class Node
 {
 public:
     int data;
     Node *next;
+    Node *prev;
 };
-
-Node *head = NULL; // global head pointer
-
-void insertAtEnd(int data)
+Node *head = NULL;
+void append(Node **head_ref, int new_data)
 {
-    Node *newNode = new Node;
-    newNode->data = data; // insert data into data part of node
-    newNode->next = NULL; // assign NULL to the next of the node
-
-    if (head == NULL)
+    Node *new_node = new Node();
+    Node *last = *head_ref;
+    new_node->data = new_data;
+    new_node->next = NULL;
+    if (*head_ref == NULL)
     {
-        head = newNode; // if list is empty then make new node as head
+        new_node->prev = NULL;
+        *head_ref = new_node;
+        return;
     }
-    // else if list is not empty then traverse to the end of the list and then add the element
-    else
-    {
-        Node *temp = head;
-        while (temp->next != NULL)
-            temp = temp->next;
-        temp->next = newNode; // change the next of the last node to the new node
-    }
+    while (last->next != NULL)
+        last = last->next;
+    last->next = new_node;
+    new_node->prev = last;
+    return;
 }
-
-// function to print the list
-void printList()
+void deleteNode(Node **head_ref, Node *del)
 {
-    Node *temp = head;
-    while (temp != NULL)
-    {
-        cout << temp->data << " ";
-        temp = temp->next;
-    }
+    if (*head_ref == NULL || del == NULL)
+        return;
+    if (*head_ref == del)
+        *head_ref = del->next;
+    if (del->next != NULL)
+        del->next->prev = del->prev;
+    if (del->prev != NULL)
+        del->prev->next = del->next;
+    free(del);
+
+    return;
 }
-
-//function to insert node after a given value
-void insertAfterNode(int key, int data)
+void deleteOddNodes(Node **head_ref, int counter)
 {
-    Node *newNode = new Node; //make new node
-    newNode->data = data;
-    Node *temp = head;
-    while (temp != NULL) //iterate till the end of list
+    Node *ptr = *head_ref;
+    Node *next;
+    int count = 0;
+    while (ptr != NULL)
     {
-        if (head == NULL) //if list is empty
+        next = ptr->next;
+        if (ptr->data % 2 != 0)
         {
-            insertAtEnd(data); //insert data at end (single element only)
+            deleteNode(head_ref, ptr);
         }
         else
         {
-            if (temp->data == key) //if given node is found
-            {
-                // (this given sequence MUST be followed)
-                // point new node to the next of the key node
-                newNode->next = temp->next;
-                // point key to the new node
-                temp->next = newNode;
-            }
-            temp = temp->next; // move pointer forward
+            count++;
         }
+        ptr = next;
+    }
+    if (count == counter)
+    {
+        cout << "No student is having odd roll number";
+        exit(0);
     }
 }
-
+void printList(Node *head)
+{
+    while (head != NULL)
+    {
+        cout << head->data << " ";
+        head = head->next;
+    }
+}
 int main()
 {
-    // inserting element in the end of the list
-    insertAtEnd(6);
-    insertAtEnd(5);
-    insertAtEnd(4);
-    insertAtEnd(3);
-
-    insertAfterNode(5, 99); //function call to insert 99 after node containing value 5
-
-    printList(); // function call to print the list
+    int t;
+    cin >> t;
+    int counter = t;
+    if ((t < 3) || (t > 12))
+    {
+        cout << "Wrong Input";
+        exit(0);
+    }
+    else
+    {
+        while (t--)
+        {
+            int x;
+            cin >> x;
+            append(&head, x);
+        }
+        deleteOddNodes(&head, counter);
+        printList(head);
+    }
     return 0;
 }
