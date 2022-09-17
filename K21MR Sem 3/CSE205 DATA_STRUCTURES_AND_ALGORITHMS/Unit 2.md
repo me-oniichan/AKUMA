@@ -71,7 +71,7 @@ void insertAtEnd(int data)
 	newNode->next = NULL; // assign NULL to the next of the node
 
 	if(head == NULL){
-		head = newNode; // if list is empty then make new node as head
+			head = newNode; // if list is empty then make new node as head
 	}
 	// else if list is not empty then traverse to the end of the list and then add the element
 	else{
