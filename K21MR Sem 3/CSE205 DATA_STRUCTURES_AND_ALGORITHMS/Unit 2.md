@@ -286,3 +286,68 @@ int main()
     return 0;
 }
 ```
+---
+# Doubly Linked List
+## Insertion at the beginning of the list
+```cpp
+
+```
+---
+## Insertion at the end of the list
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+class Node
+{
+public:
+    int data;   // data part of the node
+    Node *next; // make next pointer to point to the next node
+    Node *prev; // make previous pointer to point to the previous node
+};
+Node *head = NULL; // global head pointer
+
+// to push data into the end of the DLL
+void pushTail(int data)
+{
+    Node *newNode = new Node;
+    Node *tail = head;
+    newNode->data = data;
+    newNode->next = NULL;
+    if (head == NULL)
+    {
+        newNode->prev = NULL;
+        head = newNode;
+        return;
+    }
+    while (tail->next != NULL)
+        tail = tail->next;
+    tail->next = newNode;
+    newNode->prev = tail;
+}
+
+// to display the DLL
+void display()
+{
+    Node *temp = head;   // assign temp pointer to the head
+    while (temp != NULL) // iterate as long as the temp pointer is not NULL
+    {
+        cout << temp->data << " "; // display data part of the node
+        temp = temp->next;         // move forward in the DLL
+    }
+}
+
+//driver function
+int main()
+{
+    // function to insert data into the tail of the DLL
+    pushTail(7);
+    pushTail(8);
+    pushTail(3);
+    pushTail(9);
+    pushTail(1);
+    pushTail(3);
+    display();
+    return 0;
+}
+```
+---
