@@ -6,97 +6,101 @@
 using namespace std;
 
 class node
-    {
-        public:
-        int data;
-        node* next;
-    };
-node* head=NULL;
-void insert(int d) {
-    node* ptr;
-    node* n = new node;
+{
+public:
+    int data;
+    node *next;
+};
+node *head = NULL;
+void insert(int d)
+{
+    node *ptr;
+    node *n = new node;
     n->data = d;
     n->next = NULL;
-    if(head == NULL) {
+    if (head == NULL)
+    {
         head = n;
     }
-    else 
+    else
     {
-    ptr = head;
-    while (ptr->next != NULL) 
+        ptr = head;
+        while (ptr->next != NULL)
         {
             ptr = ptr->next;
         }
         ptr->next = n;
     }
-    }
+}
 
-void del() {
-    node* ptr;
-    node*prev;
-    int z=0;
-    if(head == NULL) 
+void del()
+{
+    node *ptr;
+    node *prev;
+    int z = 0;
+    if (head == NULL)
     {
         exit(0);
     }
-    while((head->data)%2==0)
+    while ((head->data) % 2 == 0)
     {
-        head=head->next;
+        head = head->next;
         z++;
-        if(head==NULL)
+        if (head == NULL)
         {
             exit(0);
-            cout<<"No even number present";
+            cout << "No even number present";
         }
     }
-    ptr=head;
-    prev=head;
-    while (ptr->next!= NULL) 
-    {   
-        if((ptr->data)%2==0)
+    ptr = head;
+    prev = head;
+    while (ptr->next != NULL)
+    {
+        if ((ptr->data) % 2 == 0)
         {
-            (prev->next)=(ptr->next);
+            (prev->next) = (ptr->next);
             z++;
             ptr = ptr->next;
         }
         else
         {
-        prev=ptr;
-        ptr = ptr->next;
+            prev = ptr;
+            ptr = ptr->next;
         }
     }
-    if((prev->data)%2==0)
+    if ((prev->data) % 2 == 0)
     {
-        prev->next=NULL;
+        prev->next = NULL;
     }
-    if(z==0)
+    if (z == 0)
     {
-        cout<<"No even number present";
+        cout << "No even number present";
         exit(0);
     }
-    
 }
 
-void traverse() {
-    node* ptr;
-    if(head == NULL) 
+void traverse()
+{
+    node *ptr;
+    if (head == NULL)
     {
         exit(0);
     }
     ptr = head;
-  
-    while (ptr->next!= NULL) {
-        cout<<ptr->data<<" ";
+
+    while (ptr->next != NULL)
+    {
+        cout << ptr->data << " ";
         ptr = ptr->next;
     }
 }
 
-int main() 
+int main()
 {
-    int x=0;
-    while(x!=-1)
+    int x = 0;
+    while (x != -1)
     {
-        cin>>x;
+        cin >> x;
         insert(x);
     }
     del();
