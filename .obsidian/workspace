@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "9454eba0ec2eeba4",
+        "id": "1fa948b8c6859e4f",
         "type": "leaf",
         "state": {
           "type": "markdown",
@@ -13,21 +13,7 @@
             "mode": "source",
             "source": false
           }
-        },
-        "group": "1c586665888017d3"
-      },
-      {
-        "id": "ffd5da58b8307613",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "K21MR Sem 3/CSE205 DATA_STRUCTURES_AND_ALGORITHMS/Unit 2.md",
-            "mode": "preview",
-            "source": false
-          }
-        },
-        "group": "1c586665888017d3"
+        }
       }
     ],
     "direction": "vertical"
@@ -143,10 +129,10 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "9454eba0ec2eeba4",
+  "active": "1fa948b8c6859e4f",
   "lastOpenFiles": [
-    "K21MR Sem 3/CSE205 DATA_STRUCTURES_AND_ALGORITHMS/Unit 1.md",
     "K21MR Sem 3/CSE205 DATA_STRUCTURES_AND_ALGORITHMS/Unit 2.md",
+    "K21MR Sem 3/CSE205 DATA_STRUCTURES_AND_ALGORITHMS/Unit 1.md",
     "K21MR Sem 3/CSE320 SOFTWARE_ENGINEERING/Unit 1.md",
     "K21MR Sem 3/syllabus.pdf",
     "K21MR Sem 3/CSE320 SOFTWARE_ENGINEERING/fundamentals-of-software-engineering-fourth-edition-rajib-mall.pdf"
