@@ -1,51 +1,51 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 class Node
 {
-    public:
+public:
     int data;
-    Node* next;
+    Node *next;
 };
-Node* top = NULL;
+Node *head = NULL;
 void push(int data)
 {
-    Node* n = new Node;
-    n->data = data;
-    n->next = top;
-    top = n;
+    Node *newNode = new Node;
+    newNode->data = data;
+    newNode->next = head;
+    head = newNode;
+}
+void printStack()
+{
+    Node *temp = head;
+    while (temp != NULL)
+    {
+        cout << temp->data << " ";
+        temp = temp->next;
+    }
+    cout << endl;
 }
 void pop()
 {
-    if(top == NULL) cout<<"under";
-    else{
-        top = top->next;
-    }
-}
-void display()
-{
-    Node* ptr;
-    if(top == NULL)
-    {
-        cout<<"Empty";
-    }
+    if (head == NULL)
+        cout << "Stack underflow\n";
     else
     {
-        ptr = top;
-        cout<<"Stack elements are: ";
-        while(ptr != NULL)
-        {
-            cout<<ptr->data<<" ";
-            ptr = ptr->next;
-        }
+        Node *temp = head;
+        head = head->next;
+        free(temp);
     }
 }
 int main()
 {
-    push(10);
-    push(11);
-    push(12);
-    display();
+    push(1);
+    push(2);
+    push(3);
+    push(6);
+    push(7);
+    push(8);
+    printStack();
+    cout << "Head popped\n";
     pop();
-    display();
+    printStack();
     return 0;
 }
