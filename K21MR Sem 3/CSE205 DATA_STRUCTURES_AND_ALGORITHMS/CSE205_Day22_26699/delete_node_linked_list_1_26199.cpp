@@ -1,83 +1,95 @@
 #include <bits/stdc++.h>
 using namespace std;
-struct Node
+
+class Node
 {
+public:
     int data;
-    struct Node *next;
+    Node *next = NULL;
+
+    Node(int val)
+    {
+        data = val;
+    }
 };
-void insertNode(struct Node **head_ref, int new_data)
+
+class LinkedList
 {
-    struct Node *new_node = (struct Node *)malloc(sizeof(struct Node));
-    struct Node *last = *head_ref;
-    new_node->data = new_data;
-    new_node->next = NULL;
-    if(*head_ref == NULL)
+public:
+    Node *head = NULL;
+    int size = 0;
+    LinkedList(int val)
     {
-        *head_ref = new_node;
-        return;
+        head = new Node(val);
+        size++;
     }
-    while(last->next != NULL)
+
+    LinkedList(){};
+
+    // Insert element in list
+    void push(int val)
     {
-        last = last->next;
+        size++;
+        if (head == nullptr)
+        {
+            head = new Node(val);
+            return;
+        }
+
+        Node *ptr = head;
+        while (ptr->next != NULL)
+        {
+            ptr = ptr->next;
+        }
+        ptr->next = new Node(val);
     }
-    last->next = new_node;
-    return;
-}
-void deleteNode(struct Node **head_ref, int position)
-{
-    if (*head_ref == NULL)
+
+    void deleteNode(int index)
     {
-        cout<<"SLL is Empty";
-        return;
-    }
-    struct Node *temp = *head_ref;
-    if (position == 0)
-    {
-        *head_ref = temp->next;
-        free(temp);
-        return;
-    }
-    for (int i = 1; temp != NULL && i < position - 1; i++)
-    {
-        temp = temp->next;
-    }
-    if (temp == NULL || temp->next == NULL)
-    {
-        cout<<"SLL is Empty";
-        return;
-    }
-    struct Node *next = temp->next->next;
-    free(temp->next);
-    temp->next = next;
-}
-void printLinkedList(struct Node *node)
-{
-    while (node != NULL)
-    {
-        cout << node->data << " ";
-        node = node->next;
-    }
-}
+        if (head == nullptr)
+            return;
+        else if (index == 0)
+        {
+            head = head->next;
+            size--;
+            return;
+        }
+
+        Node *ptr = head;
+        int i = 1;
+        for (; ptr->next != nullptr && i < index; i++)
+            ptr = ptr->next;
+        if (i == index)
+        {
+            ptr->next = ptr->next->next;
+            size--;
+        }
+    };
+};
+
 int main()
 {
-    struct Node *head = NULL;
-    int size;
-    cin>>size;
-    if(size<0 || size >1000)
-    {exit(0);}
-    else{
-    for(int i=0;i<size;i++)
+    int n;
+    cin >> n;
+    LinkedList ll;
+    for (int i = 0; i < n; i++)
     {
-        int data; cin>>data;
-        if(data>=0 || data<=1000)
-        insertNode(&head, data);
-        else
-        exit(0);
+        int elem;
+        cin >> elem;
+        ll.push(elem);
     }
-    int index; cin>>index;
-    if(index >= size) cout<<"Invalid Position";
-    deleteNode(&head, index+1);
-    printLinkedList(head);
+    int index;
+    cin >> index;
+    if (index < 0 || index >= n)
+    {
+        cout << "Invalid Position";
+        return 0;
     }
+    ll.deleteNode(index);
+    if (ll.head != nullptr)
+        for (auto ptr = ll.head; ptr != NULL; ptr = ptr->next)
+            cout << ptr->data << ' ';
+    else
+        cout << "SLL is Empty";
     return 0;
 }
