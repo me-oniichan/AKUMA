@@ -23,7 +23,7 @@ int main()
         cin >> y;
         for (int i = 1; i < size; i += 2)
         {
-            cout << myStack[i] << endl;
+            cout << myStack[i] << " ";
         }
     }
     return 0;

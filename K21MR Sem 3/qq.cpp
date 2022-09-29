@@ -11,6 +11,9 @@ void push(int data)
 {
     Node *newNode = new Node;
     newNode->data = data;
+    if(head == NULL)
+    newNode->next = NULL;
+    else
     newNode->next = head;
     head = newNode;
 }
@@ -27,7 +30,7 @@ void printStack()
 void pop()
 {
     if (head == NULL)
-        cout << "Stack underflow\n";
+        cout << "-1";
     else
     {
         Node *temp = head;
@@ -37,15 +40,22 @@ void pop()
 }
 int main()
 {
-    push(1);
-    push(2);
-    push(3);
-    push(6);
-    push(7);
-    push(8);
-    printStack();
-    cout << "Head popped\n";
-    pop();
-    printStack();
+    while (true)
+    {
+        int choice, data;
+        cin >> choice;
+        if (choice == 1)
+        {
+            cin >> data;
+            push(data);
+        }
+        else if (choice == 2)
+            pop();
+        else
+        {
+            printStack();
+            break;
+        }
+    }
     return 0;
 }
