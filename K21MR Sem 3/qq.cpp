@@ -1,61 +1,42 @@
 #include <bits/stdc++.h>
 using namespace std;
-class Node
+
+// function to bubble sort the array
+void bubbleSort(int arr[], int size)
 {
-public:
-    int data;
-    Node *next;
-};
-Node *head = NULL;
-void push(int data)
-{
-    Node *newNode = new Node;
-    newNode->data = data;
-    if(head == NULL)
-    newNode->next = NULL;
-    else
-    newNode->next = head;
-    head = newNode;
-}
-void printStack()
-{
-    Node *temp = head;
-    while (temp != NULL)
+    int i, j;
+    // outer loop
+    for (i = 0; i < size; i++)
     {
-        cout << temp->data << " ";
-        temp = temp->next;
-    }
-    cout << endl;
-}
-void pop()
-{
-    if (head == NULL)
-        cout << "-1";
-    else
-    {
-        Node *temp = head;
-        head = head->next;
-        free(temp);
+        // inner loop
+        for (j = 0; j < size - i - 1; j++)
+        {
+            // if elemet is smaller that the next one
+            if (arr[j] > arr[j + 1])
+            {
+                // then swap the elements
+                swap(arr[j], arr[j + 1]);
+            }
+        }
     }
 }
+
+// function to print the array
+void printArray(int arr[], int size)
+{
+    for (int i = 0; i < size; i++)
+    {
+        cout << arr[i] << " ";
+    }
+}
+
+// driver function
 int main()
 {
-    while (true)
-    {
-        int choice, data;
-        cin >> choice;
-        if (choice == 1)
-        {
-            cin >> data;
-            push(data);
-        }
-        else if (choice == 2)
-            pop();
-        else
-        {
-            printStack();
-            break;
-        }
-    }
-    return 0;
+    // initialise array
+    int arr[] = {7, 8, 3, 9, 1, 3};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    bubbleSort(arr, n); // call bubble sort
+    cout << "Sorted array is : ";
+    printArray(arr, n);
 }
