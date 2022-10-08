@@ -58,7 +58,7 @@ sarkaari:
                   bahar_nikalo << ptr ka data << "->";
                   ptr = ptr ka next;
             }
-            bahar_nikalo << ptr->data;
+            bahar_nikalo << ptr ka data;
       }
 };
 
