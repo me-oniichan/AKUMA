@@ -290,7 +290,53 @@ int main()
 # Doubly Linked List
 ## Insertion at the beginning of the list
 ```cpp
-
+#include <bits/stdc++.h>
+using namespace std;
+class Node
+{
+public:
+    int data;
+    Node *next;
+    Node *prev;
+};
+Node *head = NULL;
+void pushFront(int data)
+{
+    Node *newNode = new Node;
+    if (head == NULL)
+    {
+        newNode->next = NULL;
+        newNode->prev = NULL;
+        newNode->data = data;
+        head = newNode;
+    }
+    else
+    {
+        newNode->data = data;
+        newNode->prev = NULL;
+        newNode->next = head;
+        head->prev = newNode;
+        head = newNode;
+    }
+}
+void printList()
+{
+    Node *temp = head;
+    while (temp != NULL)
+    {
+        cout << temp->data << " ";
+        temp = temp->next;
+    }
+}
+int main()
+{
+    pushFront(1);
+    pushFront(2);
+    pushFront(3);
+    pushFront(4);
+    printList();
+    return 0;
+}
 ```
 ---
 ## Insertion at the end of the list
